@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clarks Summit Fire Company - Donate</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        h2{
+            margin: 0;
+            color: #666;
+            padding-top: 45px;
+            font-size: 40px;
+            font-family: "trebuchet ms", sans-serif;
+        }
+        .item{
+            background: #686868;
+            text-align: center;
+            padding-top: 15px;
+            height: 500px !important;
+        }
+        .carousel{
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+
+        "use strict";
+
+        $(document).ready(function() {
+            $('.myCarousel').carousel({
+                interval: 40000
+            })
+
+          // Using jQuery Event API v1.3
+          $('#button').on('click', function() {
+            ga('send', 'event', 'button', 'click', 'nav-buttons');
+          });
+        });
+
+        function donate(donationAmount)
+        {
+            switch(donationAmount)
+            {
+                case "35":
+                    $("#donationIndicator").val ("288519");
+                    break;
+                case "50":
+                    $("#donationIndicator").val ("288609");
+                    break;
+                case "100":
+                    $("#donationIndicator").val ("288666");
+                    break;
+                case "150":
+                    $("#donationIndicator").val ("288682");
+                    break;
+                default:
+                    $("#donationIndicator").val ("288721");
+                    break;
+            }
+
+            $("#formDonation").submit();
+        }
+
+        // Using jQuery Event API v1.3
+        $('#but35').on('click', function() {
+          ga('send', 'event', 'button', 'click', 'donate35');
+        });
+
+        // Using jQuery Event API v1.3
+        $('#but50').on('click', function() {
+          ga('send', 'event', 'button', 'click', 'donate50');
+        });
+
+        // Using jQuery Event API v1.3
+        $('#but100').on('click', function() {
+          ga('send', 'event', 'button', 'click', 'donate100');
+        });
+
+        // Using jQuery Event API v1.3
+        $('#but150').on('click', function() {
+          ga('send', 'event', 'button', 'click', 'donate150');
+        });
+
+        // Using jQuery Event API v1.3
+        $('#butOther').on('click', function() {
+          ga('send', 'event', 'button', 'click', 'donateOther');
+        });
+
+    </script>
+</head>
+<body style="margin-left: 100px; margin-right: 100px; margin-top: 10px; background-color: #e8e8e8;">
+
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="active item">
+                <div align="center"><img src="images/slide1.png" width="590" height="400"></div>
+                <div class="carousel-caption">
+                    <h3>We had 242 fire calls last year.</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div align="center"><img src="images/ambulance.png" width="442" height="400"></div>
+                <div class="carousel-caption">
+                    <h3>We had 1,200 ambulance calls last year.</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div align="center"><img src="images/gear.png" width="600" height="400"></div>
+                <div class="carousel-caption">
+                    <h3>Firefighter gear costs $3,600.</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div align="center"><img src="images/volunteers.png" width="600" height="400"></div>
+                <div class="carousel-caption">
+                    <h3>Volunteers are always needed.</h3>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+
+    <div class="row">
+  <div class="col-md-12"><h3>How much would you like to donate?</h3></div>
+</div>
+  <div class="row">
+    <div class="col-md-2"><img src="images/Button35.png" width="160" height="50" id="but35" onclick="donate('35');" style="cursor:pointer;"></div>
+    <div class="col-md-2"><img src="images/Button50.png" width="160" height="50" id="but50" onclick="donate('50');" style="cursor:pointer;"></div>
+    <div class="col-md-2"><img src="images/Button100.png" width="160" height="50" id="but100" onclick="donate('100');" style="cursor:pointer;"></div>
+    <div class="col-md-2"><img src="images/Button150.png" width="160" height="50" id="but150" onclick="donate('150');" style="cursor:pointer;"></div>
+    <div class="col-md-2"><img src="images/ButtonOther.png" width="160" height="50" id="butother" onclick="donate('');" style="cursor:pointer;"></div>
+    <div class="col-md-2">&nbsp;</div>
+  </div>
+    <p>&nbsp;</p>
+<p class="lead">Thank you for supporting the Clarks Summit Fire Company.  Your dollars help support your community.</p>
+<p>
+    Some interesting facts about the Clarks Summit Fire Company:
+</p>
+<ul>
+    <li>We proudly serve Clarks Summit, Clarks Green, Glenburn, Waverly, Abington and parts of South Abington.
+    <li>Fire company membership is open to those ages 14 and older. Contributory and Auxiliary memberships are also available.
+    <li>Every year in October during National Fire Prevention Week we visit schools in our area to educate the children on fire safety.
+    <li>Our Sunday Breakfast buffet is held on the third Sunday of every month from 8:00am to 12:00pm.
+    <li>Our banquet hall holds up to 120 people and is available for rent.  Call <a href="tel:5705869656">570.586.9656</a> for details.
+    <li>You can follow us on <a href="https://www.facebook.com/ClarksSummitFireCompany?ref=bookmarks">Facebook</a></li>
+</ul>
+<p>
+    <strong>The official registration and financial information of the Clarks Summit Fire Company No. 1, Inc. may be obtained from the Pennsylvania Department of State by calling toll free (within Pennsylvania) 800-732-0999. Registration does not imply endorsement.</strong>
+</p>
+    <form id="formDonation" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="288519" id="donationIndicator">
+        <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="" style="visibility: hidden">
+        <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+    </div>
+
+</body>
+</html>
